@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, {  useRef, useState } from 'react'
 import Header from './Header'
 import { BG_IMG } from '../utils/constants'
 import { checkValidData } from '../utils/validate'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import {auth} from '../utils/firebase'
-import {useNavigate} from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/redux/userSlice';
 const Login = () => {
@@ -14,7 +13,6 @@ const Login = () => {
     const password=useRef(null)
     const name=useRef(null)
     const dispatch=useDispatch()
-   const navigate=useNavigate()
     const handleButton=()=>{
      
        const msg= checkValidData(email.current.value,password.current.value)
@@ -26,8 +24,8 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email.current.value, password.current.value)
          .then((userCredential) => {
            const user = userCredential.user;
-           if(user)
-           navigate('/browse')    
+         
+         
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -47,7 +45,7 @@ const Login = () => {
                         if(user){
                           const {uid,email,displayName,photoURL}=auth.currentUser
                           dispatch(addUser({uid:uid,displayName:displayName,email:email,photoURL:photoURL}))
-                          navigate('/browse')
+                         
                       }
                     }).catch((error) => {
                       const errorCode = error.code;
