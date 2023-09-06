@@ -5,13 +5,18 @@ import Header from './Header'
 import useNowPlayingMovies from '../customhooks/useNowPlayingMovies'
 import Maincontainer from './Maincontainer'
 import Secondarycontainer from './Secondarycontainer'
+import usePopularMovies from '../customhooks/usePopularMovies'
+import useTopRatedMovies from '../customhooks/useTopRatedMovies'
+import useUpcomingMovies from '../customhooks/useUpcomingMovies'
 
 const Browse = () => {
   
   useNowPlayingMovies()
-
+  usePopularMovies()
+  useTopRatedMovies()
+  useUpcomingMovies()
   return (
-    <div className='flex'>
+    <div>
       <Header />
        <Maincontainer/>
        <Secondarycontainer/>
