@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import { addNowPlayingMovies, addPopularMovies } from "../utils/redux/movieSlice"
+import { addPopularMovies } from "../utils/redux/movieSlice"
 import { API_OPTIONS } from "../utils/constants"
 
 const usePopularMovies=()=>{

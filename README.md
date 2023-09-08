@@ -41,3 +41,12 @@
     
 
 
+GPT SEARCH
+  -gpt search button
+  -create gpt slice
+  -initially showgpt false;toggle action
+  -handletoggle(dispatch)
+  -if toggle then gpt search container
+       -gpt search bar
+       -multi launguage feauture ;langslice
+    -integrate gpt api
