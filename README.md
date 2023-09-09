@@ -50,3 +50,4 @@ GPT SEARCH
        -gpt search bar
        -multi launguage feauture ;langslice
     -integrate gpt api
+    genereae openai key(platform.openapi.key)
