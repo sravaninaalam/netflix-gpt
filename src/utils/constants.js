@@ -5,11 +5,18 @@ export const BG_IMG="https://assets.nflxext.com/ffe/siteui/vlv3/00103100-5b45-4d
 
 export const USER_ICON_FUNNY="https://th.bing.com/th/id/OIP.KYCK7qm3worS8YY6WatYZgHaHD?pid=ImgDet&rs=1"
 
-export const API_OPTIONS= {
+// export const API_OPTIONS= {
+//     method: 'GET',
+//     headers: {
+//       accept: 'application/json',
+//       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMTE3ZTQ4OGM2MGM0ODdlNjRmYzM2ZmRmZjUxNDdiYiIsInN1YiI6IjY0ZjZjMjY5YjIzNGI5MDExZDUxMDBiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.epDG-XtQhbT94Pz3yJxT9M6fQ3KD65YjM8MTzmROfoQ'
+//   };
+  
+  export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer'+process.env.REACT_APP_TMDB_KEY
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMTE3ZTQ4OGM2MGM0ODdlNjRmYzM2ZmRmZjUxNDdiYiIsInN1YiI6IjY0ZjZjMjY5YjIzNGI5MDExZDUxMDBiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.epDG-XtQhbT94Pz3yJxT9M6fQ3KD65YjM8MTzmROfoQ'
     }
   };
   
@@ -23,4 +30,5 @@ export const API_OPTIONS= {
     {identifier:"tel",name:"TELUGU"}
   ]
 
-  export const Open_Ai_Key=process.env.REACT_APP_Open_Ai_Key
+  // export const Open_Ai_Key=process.env.REACT_APP_Open_Ai_Key
+  export const Open_Ai_Key='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'

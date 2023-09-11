@@ -51,3 +51,9 @@ GPT SEARCH
        -multi launguage feauture ;langslice
     -integrate gpt api
     genereae openai key(platform.openapi.key)
+
+
+=>media queries
+   by default -mobile
+      sm:greaterthan small
+      md:greater than medium

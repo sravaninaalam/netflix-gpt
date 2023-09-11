@@ -31,12 +31,12 @@ const GPTSearchBar = () => {
    }
   
   return (
-    <div className='pt-28'>
+    <div className=' pt-[40%] md:pt-28'>
     
-      <form className='bg-black w-1/2 grid grid-cols-12 mx-auto rounded-md' onSubmit={(e)=>e.preventDefault()}>
+      <form className='bg-black w-[99%] md:w-1/2 grid grid-cols-12 mx-auto rounded-md' onSubmit={(e)=>e.preventDefault()}>
           <input type='text' placeholder={lang[userlangkey].gptSearchPlaceholder} ref={searchText}
-          className='col-span-10 px-2 m-3 py-2 rounded-md'/>
-          <button type="submit" className='bg-red-500 col-span-2 m-3 py-2 rounded-md'
+          className='col-span-9 md:col-span-10 px-2 m-3 py-2 rounded-md'/>
+          <button type="submit" className='col-span-3 md:col-span-2 m-3 py-2 bg-red-500 rounded-md'
           onClick={onHandleSearch}>{lang[userlangkey].search}</button>
 
       </form>

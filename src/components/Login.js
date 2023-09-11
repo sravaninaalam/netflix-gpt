@@ -70,10 +70,10 @@ const Login = () => {
   return (
     <div >
         <Header/>
-        <div className='absolute'>
-            <img src={BG_IMG} alt='background'/>
+        <div className='fixed'>
+            <img src={BG_IMG} alt='background' className='h-screen w-screen object-cover'/>
         </div>
-        <form className='bg-black absolute w-3/12 my-36 p-10 mx-auto left-0 right-0 bg-opacity-80'
+        <form className='bg-black absolute w-2/3 md:w-3/12 my-36 p-10 mx-auto left-0 right-0 bg-opacity-80'
         onSubmit={handleSubmit}>
             <h1 className='font-serif text-3xl text-white mb-3 p-2 '> {issignin ?"Sign In":"Sign Up"}</h1>
             {!issignin && <input type='text'  ref={name} placeholder='Full Name' className='w-full p-2 m-2 rounded-md bg-gray-700'/>}
