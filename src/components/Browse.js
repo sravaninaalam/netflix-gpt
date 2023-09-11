@@ -11,6 +11,7 @@ import useUpcomingMovies from '../customhooks/useUpcomingMovies'
 import usePopularTVSeries from '../customhooks/usePopularTVSeries'
 import GPTSearch from './GPTSearch'
 import { useSelector } from 'react-redux'
+import useTopRatedTVSeries from '../customhooks/useTopRatedTVSeries'
 
 const Browse = () => {
   const isShowGpt=useSelector(store=>store.gpt.isShowGpt)
@@ -20,6 +21,7 @@ const Browse = () => {
   useTopRatedMovies()
   useUpcomingMovies()
   usePopularTVSeries()
+  useTopRatedTVSeries()
   return (
     <div>
       <Header />
