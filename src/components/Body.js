@@ -2,6 +2,7 @@
 import Browse from "./Browse"
 import Login from "./Login"
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import WatchMovie from "./WatchMovie"
 
 const appRouter=createBrowserRouter([
     {
@@ -11,6 +12,9 @@ const appRouter=createBrowserRouter([
     {
         path:'/browse',
         element:<Browse/>
+    },{
+      path:'/watchmovie/:id',
+      element:<WatchMovie/>
     }
 ])
 

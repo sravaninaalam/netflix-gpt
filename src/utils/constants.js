@@ -31,4 +31,4 @@ export const USER_ICON_FUNNY="https://th.bing.com/th/id/OIP.KYCK7qm3worS8YY6WatY
   ]
 
   // export const Open_Ai_Key=process.env.REACT_APP_Open_Ai_Key
-  export const Open_Ai_Key='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'
+  export const Open_Ai_Key='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'
