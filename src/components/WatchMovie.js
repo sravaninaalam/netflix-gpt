@@ -4,7 +4,7 @@ import useMovieInfo from '../customhooks/useMovieInfo'
 import { useSelector } from 'react-redux'
 import WatchVideo from './WatchVideo'
 import MovieNotFound from './MovieNotFound'
-
+import VideoTitle from './VideoTitle'
 
 const WatchMovie = () => {
   const {id}=useParams()
@@ -36,8 +36,11 @@ const WatchMovie = () => {
                   <button className='py-2 px-3 my-2 rounded-md bg-slate-600 text-white'>⬇MOBILE DOWNLOAD</button>
             </div>  
         </div>
+        <div>
+          <h1 className='absolute font-bold mt-[15%] mx-20 text-3xl text-white'>{title_name}</h1>
+          <p className='absolute w-1/3 font-semibold mt-[18%] mx-20  text-white'>{movie?.overview}</p>
           <WatchVideo movieId={movie?.id}/>
-         
+        </div>
     </>
   )
 }
