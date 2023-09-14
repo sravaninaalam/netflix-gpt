@@ -4,7 +4,9 @@ import useMovieInfo from '../customhooks/useMovieInfo'
 import { useSelector } from 'react-redux'
 import WatchVideo from './WatchVideo'
 import MovieNotFound from './MovieNotFound'
-import VideoTitle from './VideoTitle'
+import { useOnline } from '../customhooks/useOnline'
+import Ofline from './Ofline'
+
 
 const WatchMovie = () => {
   const {id}=useParams()
@@ -13,6 +15,11 @@ const WatchMovie = () => {
   const movie=useSelector(store=>store.movies.movieInfo)
   // console.log(movie)
   const title_name=movie?.title ? movie?.title:(movie?.name ?movie?.name:"")
+
+  const online=useOnline()
+  if(!online){
+    return <Ofline/>
+  }
 
   return (!movie)?<MovieNotFound/>: (
     <>
@@ -37,8 +44,8 @@ const WatchMovie = () => {
             </div>  
         </div>
         <div>
-          <h1 className='absolute font-bold mt-[15%] mx-20 text-3xl text-white'>{title_name}</h1>
-          <p className='absolute w-1/3 font-semibold mt-[18%] mx-20  text-white'>{movie?.overview}</p>
+          <h1 className='absolute font-bold mt-[55%] md:mt-[15%] mx-20 text-3xl text-white'>{title_name}</h1>
+          <p className='hidden md:block absolute md:w-1/3 font-semibold mt-[18%] mx-20  text-white'>{movie?.overview}</p>
           <WatchVideo movieId={movie?.id}/>
         </div>
     </>

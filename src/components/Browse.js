@@ -1,6 +1,4 @@
 
-import { useEffect } from 'react'
-import { API_OPTIONS } from '../utils/constants'
 import Header from './Header'
 import useNowPlayingMovies from '../customhooks/useNowPlayingMovies'
 import Maincontainer from './Maincontainer'
@@ -12,6 +10,8 @@ import usePopularTVSeries from '../customhooks/usePopularTVSeries'
 import GPTSearch from './GPTSearch'
 import { useSelector } from 'react-redux'
 import useTopRatedTVSeries from '../customhooks/useTopRatedTVSeries'
+import { useOnline } from '../customhooks/useOnline'
+import Ofline from './Ofline'
 
 const Browse = () => {
   const isShowGpt=useSelector(store=>store.gpt.isShowGpt)
@@ -22,6 +22,11 @@ const Browse = () => {
   useUpcomingMovies()
   usePopularTVSeries()
   useTopRatedTVSeries()
+
+  const online =useOnline()
+  if(!online){
+    return <Ofline/>
+  }
   return (
     <div>
       <Header />
