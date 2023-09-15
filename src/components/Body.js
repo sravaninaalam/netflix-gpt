@@ -3,6 +3,8 @@ import Browse from "./Browse"
 import Login from "./Login"
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import WatchMovie from "./WatchMovie"
+import Upcoming, { Nowplaying, Popular, TopRated } from "./routing/Routinglink"
+
 
 const appRouter=createBrowserRouter([
     {
@@ -11,10 +13,25 @@ const appRouter=createBrowserRouter([
     },
     {
         path:'/browse',
-        element:<Browse/>
-    },{
+         element:<Browse/>,
+       
+    },
+    {
       path:'/watchmovie/:id',
       element:<WatchMovie/>
+    },
+    {
+      path:'/upcoming',
+      element:<Upcoming/>
+    },{
+      path:'/toprated',
+      element:<TopRated/>
+    },{
+      path:'/popular',
+      element:<Popular/>
+    },{
+      path:'/nowplaying',
+      element:<Nowplaying/>
     }
 ])
 
