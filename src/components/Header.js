@@ -47,7 +47,7 @@ const Header = () => {
       dispatch(changeLanguage(e.target.value))
     }
   return (
-    <div  className='fixed px-6 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between flex-col md:flex-row'>
+    <div  className='absolute px-6 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between flex-col md:flex-row'>
       <div className='flex'><img src={LOGO} alt='logo' className='w-44 mx-5 md:mx-0'/></div>
       {user && <Navitems/>}
     { user && 
