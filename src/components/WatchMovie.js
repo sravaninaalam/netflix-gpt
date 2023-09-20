@@ -16,12 +16,13 @@ const WatchMovie = () => {
   // console.log(movie)
   const title_name=movie?.title ? movie?.title:(movie?.name ?movie?.name:"")
 
+  
   const online=useOnline()
   if(!online){
     return <Ofline/>
   }
 
-  return (!movie)?<MovieNotFound/>: (
+  return (movie?.success===false)?<MovieNotFound/>: (
     <>
         <div className='bg-black bg-gradient-to-b from-black w-screen'>
          <Link to='/browse'><img src={LOGO} alt='applogo' className='w-44 mx-5 md:mx-0'/></Link>
