@@ -4,6 +4,8 @@ Introducing "NETFLIX-GPT🤖" – A Netflix Clone Infused with AI-Powered Movie 
 to deliver an intelligent and intuitive movie search experience.
 💡Noteworthy Features: Employs the GPT-3.5 API for smart movie searches, integrates Redux for state management, and utilizes
  the TMDB Movie API for comprehensive movie data.
+
+ 
 💻Tech Stack:
 React: An open-source JavaScript library ideal for crafting user interfaces (UIs) and UI components.
 Tailwind CSS: A utility-first CSS framework for sleek and responsive design
