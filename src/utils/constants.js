@@ -16,7 +16,8 @@ export const USER_ICON_FUNNY="https://th.bing.com/th/id/OIP.KYCK7qm3worS8YY6WatY
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMTE3ZTQ4OGM2MGM0ODdlNjRmYzM2ZmRmZjUxNDdiYiIsInN1YiI6IjY0ZjZjMjY5YjIzNGI5MDExZDUxMDBiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.epDG-XtQhbT94Pz3yJxT9M6fQ3KD65YjM8MTzmROfoQ'
+      // Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMTE3ZTQ4OGM2MGM0ODdlNjRmYzM2ZmRmZjUxNDdiYiIsInN1YiI6IjY0ZjZjMjY5YjIzNGI5MDExZDUxMDBiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.epDG-XtQhbT94Pz3yJxT9M6fQ3KD65YjM8MTzmROfoQ'
+      Authorization:'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjM2NkYWRiNGNlZDBhNTJjNWYxYzZhMzEyYzliMDhiMiIsInN1YiI6IjY0ZjZjMjY5YjIzNGI5MDExZDUxMDBiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5VHwDzqbCIAlYU2ryLTXArWgAStNjtZ-9ls43Idb7aw'
     }
   };
   
@@ -32,3 +33,4 @@ export const USER_ICON_FUNNY="https://th.bing.com/th/id/OIP.KYCK7qm3worS8YY6WatY
 
   // export const Open_Ai_Key=process.env.REACT_APP_Open_Ai_Key
   export const OPEN_AI_KEY=process.env.REACT_APP_OPEN_AI_KEY
+  

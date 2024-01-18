@@ -18,6 +18,7 @@ const GPTSearchBar = () => {
         });
         if(!gpt_results.choices){
           alert("NO RESULTS Found")
+          
         }
         // console.log(gpt_results.choices[0]?.message?.content)
         const gptMovies=gpt_results.choices[0]?.message?.content.split(",")
