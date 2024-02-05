@@ -7,6 +7,7 @@ import { gptMovieResult } from "../utils/redux/gptSlice"
 const GPTSearchBar = () => {
   
   const userlangkey=useSelector(store=>store.lang.defaultlang)
+  const results=useSelector(store=>store.gpt.movieNames)
   const dispatch=useDispatch()
   const searchText=useRef(null)
    const onHandleSearch=async()=>{
@@ -41,6 +42,11 @@ const GPTSearchBar = () => {
           onClick={onHandleSearch}>{lang[userlangkey].search}</button>
 
       </form>
+      {!results &&
+      <div className="bg-white w-2/3 ml-20 my-5">
+          <p className="text-orange-500 p-2 text-lg">
+            <span className="font-semibold text-red-700">Note: </span>Sometimes search function might not work because of api limit exceedence</p>
+      </div>}
     </div>
   )
 }
