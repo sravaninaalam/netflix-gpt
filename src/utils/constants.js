@@ -3,7 +3,7 @@ export const LOGO=
 
 export const BG_IMG="https://assets.nflxext.com/ffe/siteui/vlv3/00103100-5b45-4d4f-af32-342649f1bda5/64774cd8-5c3a-4823-a0bb-1610d6971bd4/IN-en-20230821-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
 
-export const USER_ICON_FUNNY="https://th.bing.com/th/id/OIP.KYCK7qm3worS8YY6WatYZgHaHD?pid=ImgDet&rs=1"
+export const USER_ICON_FUNNY="https://i.pinimg.com/550x/da/aa/6a/daaa6afe582f15c013ad6a7f9f0a842b.jpg"
 
 // export const API_OPTIONS= {
 //     method: 'GET',
