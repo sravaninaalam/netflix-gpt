@@ -6,6 +6,7 @@ import useTrailerVideo from "../customhooks/useTrailerVideo"
 const WatchVideo = ({movieId}) => {
   useTrailerVideo(movieId)
   const trailer=useSelector(store=>store.movies.trailer)
+  if(!trailer)return
   return (
     
          <div className="mx-10 border border-black">
