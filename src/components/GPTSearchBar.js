@@ -27,7 +27,7 @@ const GPTSearchBar = () => {
         // ["mve1","mve2","mve3","mve4","mve5"]
         // For each movie search on TMDB API
        const promiseArray=gptMovies.map(movie=>getGPTSearchMovies(movie))
-       const results=await Promise.all(promiseArray)
+       const results=await Promise.allSettled(promiseArray)
       //  console.log(results)
       dispatch(gptMovieResult({movieNames:gptMovies,results:results}))
    }
