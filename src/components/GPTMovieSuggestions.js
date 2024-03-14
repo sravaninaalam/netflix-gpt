@@ -6,10 +6,12 @@ import Ofline from './Ofline'
 
 const GPTMovieSuggestions = () => {
   const {movieResults,movieNames}=useSelector(store=>store.gpt)
-  // console.log(movieResults)
+  // const {movieResults}=useSelector(store=>store.gpt)
   const online=useOnline()
   if(!online) return <Ofline/>
-  if(!movieNames) return
+  // if(!movieNames) return
+  console.log(movieResults)
+  if(!movieResults) return
 
   return (
    <>
@@ -17,6 +19,7 @@ const GPTMovieSuggestions = () => {
         {movieNames.map((movieName,index)=>
          <MovieList key={movieName} title={movieName} movies={movieResults[index]}/>
         )}
+        {/* <MovieList title={movieResults[0]?.title} movies={movieResults}/> */}
       </div>
    </>
   )

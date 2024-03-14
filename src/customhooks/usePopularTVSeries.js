@@ -12,10 +12,15 @@ const popularTVSeries=useSelector(store=>store.movies.popularTVSeries)
   },[])
      
   const getPopularTVSeries=async()=>{
+    try{
     const data=await fetch('https://api.themoviedb.org/3/tv/popular?language=en-US&page=1', API_OPTIONS)
     const json=await data.json()
     // console.log(json?.results)
     dispatch(addPopularTVSeries(json?.results))
+  }
+  catch(error){
+    alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+}
   }
 }
 export default usePopularTVSeries

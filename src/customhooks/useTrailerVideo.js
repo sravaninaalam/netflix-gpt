@@ -9,6 +9,7 @@ const useTrailerVideo = (movieId) => {
   
     
     const getMovies=async()=>{
+      try{
         const data=await fetch('https://api.themoviedb.org/3/movie/'+movieId+'/videos',API_OPTIONS)
         const json=await data.json()
        
@@ -18,7 +19,11 @@ const useTrailerVideo = (movieId) => {
           // console.log(result)
           // const videokey=result[0]?.key
           dispatch(addTrailer(result))
-      } 
+      }
+      catch(error){
+        alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+    } 
+    }
 
       useEffect(()=>{
         getMovies()

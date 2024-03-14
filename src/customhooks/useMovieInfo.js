@@ -10,12 +10,17 @@ const useMovieInfo = (movieId) => {
     },[])
     
     const getMovieInfo=async()=>{
+      try{
         const data=await fetch('https://api.themoviedb.org/3/movie/'+movieId,API_OPTIONS)
         const json=await data.json()
         // console.log(json)
       //  const {original_title,overview,poster_path,release_date }=json       
         dispatch(addMovieInfo(json))
       }   
+      catch(error){
+        alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+    }
+    }
    
 }
 
