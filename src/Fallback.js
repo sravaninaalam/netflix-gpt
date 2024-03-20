@@ -1,3 +1,5 @@
+// A Fallback component enabled for Jio network
+
 import React, { useEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
