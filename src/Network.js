@@ -1,3 +1,5 @@
+// Checking network of user because TMDB is not supporting in jio network
+
 import { useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import { findNetwork } from './utils/redux/networkSlice';
