@@ -18,7 +18,7 @@ const upcomingMovies=useSelector(store=>store.movies.upcomingMovies)
     dispatch(addUpcomingMovies(json?.results))
   }
   catch(error){
-    alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+    return null
 }
   }
 }

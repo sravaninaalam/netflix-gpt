@@ -18,7 +18,7 @@ const topRatedTVSeries=useSelector(store=>store.movies.topRatedTVSeries)
     dispatch(addTopRatedTVSeries(json?.results))
   }
   catch(error){
-    alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+    return null
 }
   }
 }

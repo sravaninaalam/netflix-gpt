@@ -21,7 +21,7 @@ const useTrailerVideo = (movieId) => {
           dispatch(addTrailer(result))
       }
       catch(error){
-        alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+        return null
     } 
     }
 

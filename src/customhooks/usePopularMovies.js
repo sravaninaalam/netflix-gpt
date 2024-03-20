@@ -18,7 +18,7 @@ const popularMovies=useSelector(store=>store.movies.popularMovies)
     dispatch(addPopularMovies(json?.results))
   }
   catch(error){
-    alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+    return null
 }
   }
 }

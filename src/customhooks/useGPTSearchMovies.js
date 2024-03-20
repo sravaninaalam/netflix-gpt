@@ -8,7 +8,7 @@ const useGPTSearchMovies=async(movie)=>{
         return json?.results
     }
     catch(error){
-        alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+       return null
     }
    }
 

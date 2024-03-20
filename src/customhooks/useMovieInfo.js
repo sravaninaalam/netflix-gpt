@@ -18,7 +18,7 @@ const useMovieInfo = (movieId) => {
         dispatch(addMovieInfo(json))
       }   
       catch(error){
-        alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+        return null
     }
     }
    

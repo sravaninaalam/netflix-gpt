@@ -18,7 +18,7 @@ const nowPlayingMovies=useSelector(store=>store.movies.nowPlayingMovies)
     dispatch(addNowPlayingMovies(json?.results))
     }
     catch(error){
-      alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+      return null
   }
   }
 }

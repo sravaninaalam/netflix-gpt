@@ -18,7 +18,7 @@ const topRatedMovies =useSelector(store=>store.movies.topRatedMovies)
     dispatch(addTopRatedMovies(json?.results))
   }
   catch(error){
-    alert("Sorry😔 !!!Tmdb is not supporting in jio networks")
+    return null
 }
   }
 }
