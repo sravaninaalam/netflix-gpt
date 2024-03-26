@@ -4,7 +4,7 @@ import Login from "./Login"
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import WatchMovie from "./WatchMovie"
 import Upcoming, { Nowplaying, Popular, TopRated } from "./routing/Routinglink"
-
+import Network from '../Network' 
 
 const appRouter=createBrowserRouter([
     {
@@ -13,7 +13,7 @@ const appRouter=createBrowserRouter([
     },
     {
         path:'/browse',
-         element:<Browse/>,
+         element:<Network/>,
        
     },
     {
