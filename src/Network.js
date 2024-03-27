@@ -13,7 +13,7 @@ const Network = () => {
         const response = await fetch('https://ipinfo.io/json');
         const data = await response.json();
         const isp =  data?.org; // Extract ISP from organization field
-        console.log(isp)
+        
         setNetworkProvider(isp || 'Unknown');
       } catch (error) {
         console.error('Error fetching IP info:', error);
