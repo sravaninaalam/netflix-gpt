@@ -2,7 +2,9 @@ import MovieCard from './MovieCard'
 import {Link} from 'react-router-dom'
 const MovieList = ({title,movies}) => {
 
-    if(!movies) return
+    if(!movies) {
+      return
+    }
   return (
   
   <div className='px-6'>

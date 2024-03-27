@@ -4,16 +4,19 @@ import Login from "./Login"
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import WatchMovie from "./WatchMovie"
 import Upcoming, { Nowplaying, Popular, TopRated } from "./routing/Routinglink"
+import Fallback from "../Fallback"
+import Network from "../Network"
 
 
 const appRouter=createBrowserRouter([
     {
         path:'/',
-        element:<Login/>
+        element:<Login/>,
+        errorElement:<Fallback/>
     },
     {
         path:'/browse',
-         element:<Browse/>,
+         element:<Network/>,
        
     },
     {
@@ -32,6 +35,10 @@ const appRouter=createBrowserRouter([
     },{
       path:'/nowplaying',
       element:<Nowplaying/>
+    },
+    {
+      path:'*',
+      errorElement:<Fallback/>
     }
 ])
 

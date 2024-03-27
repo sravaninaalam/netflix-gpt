@@ -12,10 +12,11 @@ import { useSelector } from 'react-redux'
 import useTopRatedTVSeries from '../customhooks/useTopRatedTVSeries'
 import { useOnline } from '../customhooks/useOnline'
 import Ofline from './Ofline'
+import Fallback from '../Fallback'
+import Network from '../Network'
 
 const Browse = () => {
   const isShowGpt=useSelector(store=>store.gpt.isShowGpt)
-  
   useNowPlayingMovies()
   usePopularMovies()
   useTopRatedMovies()
@@ -27,15 +28,16 @@ const Browse = () => {
   if(!online){
     return <Ofline/>
   }
+
   return (
     <div>
       <Header />
-      {isShowGpt===false?<div>
+        {isShowGpt===false?<div>
           <Maincontainer/>
           <Secondarycontainer/></div>
       :     
         <GPTSearch/>
-      }
+      } 
     </div>
   )
 }

@@ -16,11 +16,19 @@ export const USER_ICON_FUNNY="https://th.bing.com/th/id/OIP.KYCK7qm3worS8YY6WatY
     method: 'GET',
     headers: {
       accept: 'application/json',
+      Authorization:'2302e22424msh7a8957de7d98a81p104290jsn56a56269d3a8'
       // Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMTE3ZTQ4OGM2MGM0ODdlNjRmYzM2ZmRmZjUxNDdiYiIsInN1YiI6IjY0ZjZjMjY5YjIzNGI5MDExZDUxMDBiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.epDG-XtQhbT94Pz3yJxT9M6fQ3KD65YjM8MTzmROfoQ'
-      Authorization:'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjM2NkYWRiNGNlZDBhNTJjNWYxYzZhMzEyYzliMDhiMiIsInN1YiI6IjY0ZjZjMjY5YjIzNGI5MDExZDUxMDBiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5VHwDzqbCIAlYU2ryLTXArWgAStNjtZ-9ls43Idb7aw'
+      // Authorization:'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjM2NkYWRiNGNlZDBhNTJjNWYxYzZhMzEyYzliMDhiMiIsInN1YiI6IjY0ZjZjMjY5YjIzNGI5MDExZDUxMDBiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5VHwDzqbCIAlYU2ryLTXArWgAStNjtZ-9ls43Idb7aw'
     }
   };
   
+  export const API_OPTIONS_rapid={
+    method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '2302e22424msh7a8957de7d98a81p104290jsn56a56269d3a8',
+		'X-RapidAPI-Host': 'imdb146.p.rapidapi.com'
+	}
+  }
 
   export const IMG_CDN_URL="https://image.tmdb.org/t/p/w500/"
 
